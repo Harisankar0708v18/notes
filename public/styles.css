@@ -1,0 +1,161 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: #eee;
+  padding: 0 16px;
+}
+
+header {
+  background-color: #f513ea;
+  margin: auto -16px;
+  padding: 16px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  color: #fff;
+  font-family: "McLaren", cursive;
+  font-weight: 200;
+}
+
+footer {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  padding: 0.5rem 0;
+}
+
+footer p {
+  color: #ccc;
+}
+
+.notes-container {
+  display: flex;
+  flex-direction: column-reverse; /* Stack notes in reverse order on mobile */
+}
+
+.note {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.note h1 {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+}
+
+.note p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.note .delete-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: #f513ea;
+  color: #fff;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 0.9em;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.note .delete-button:hover {
+  background-color: #d00a9b;
+}
+
+form.create-note {
+  background: #fff;
+  padding: 12px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+  margin-bottom: 16px;
+}
+
+form.create-note input,
+form.create-note textarea {
+  width: calc(100% - 8px);
+  border: none;
+  padding: 8px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+  margin-bottom: 8px;
+}
+
+form.create-note button {
+  background: #f513ea;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 0 4px;
+  }
+
+  header {
+    padding: 10px 20px;
+  }
+
+  .notes-container {
+    flex-direction: column;
+  }
+
+  .note .delete-button {
+    top: 6px;
+    right: 6px;
+    width: 24px;
+    height: 24px;
+    font-size: 0.8em;
+  }
+
+  form.create-note {
+    padding: 10px;
+  }
+
+  form.create-note input,
+  form.create-note textarea {
+    padding: 6px;
+    margin-bottom: 6px;
+  }
+
+  form.create-note button {
+    bottom: -14px;
+    width: 32px;
+    height: 32px;
+  }
+}
+
+
